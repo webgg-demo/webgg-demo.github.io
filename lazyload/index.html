@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lazyload test</title>
+    <style media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            width: 100%;
+        }
+        .wrapper {
+            margin: 0 auto;
+            width: 80%;
+        }
+        .wrapper::after {
+            display: block;
+            content: "";
+            clear: both;
+            zoom: 1;
+        }
+        img {
+            margin-top: 20px;
+            margin-left: 5%;
+            float: left;
+            width: 20%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/1.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/2.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/3.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/4.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/5.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/6.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/7.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/8.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/9.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/10.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/11.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/12.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/13.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/14.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/15.jpg" class="lazyload-img">
+        <img src="./img/logo.jpg" alt="lazyload-img" data-src="./img/16.jpg" class="lazyload-img">
+    </div>
+
+    <script type="text/javascript" src="./js/lazyload.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            new LazyLoad();
+        };
+    </script>
+</body>
+</html>
