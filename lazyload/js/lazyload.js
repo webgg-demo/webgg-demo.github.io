@@ -31,7 +31,7 @@
 
             function callback() {
                 timer && clearTimeout(timer);
-                setTimeout(function () {
+                timer = setTimeout(function () {
                     var imgInVp = [];
 
                     self.imgList.forEach(function (img) {
@@ -53,7 +53,7 @@
                     cb: callback
                 },
                 {
-                    elem: document,
+                    elem: window,
                     type: "resize",
                     cb: callback
                 }
